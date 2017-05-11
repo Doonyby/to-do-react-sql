@@ -1,7 +1,7 @@
-export default (text = 'Hello World I am here! Are you?') => {
-	const element = document.createElement('div');
+export default (text = 'Hello World I am here! Are you? Anyone? Buler?') => {
+    const element = document.createElement('div');
 
-	element.innerHTML = text;
+    element.innerHTML = text;
 
-	return element;
+    return element;
 };
