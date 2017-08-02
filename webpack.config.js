@@ -16,7 +16,7 @@ const commonConfig = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Webpack demo',
+            title: 'Todo React SQL',
         }),
     ],
     bail: true,	
@@ -31,6 +31,10 @@ const developmentConfig = () => {
             stats: 'errors-only',
             host: process.env.HOST,
             port: process.env.PORT,
+            overlay: {
+                errors: true,
+                warnings: true,
+            },
         },
         module: {
 	      rules: [
