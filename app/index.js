@@ -2,7 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, browserHistory } from "react-router";
 
-import Entry from './component/Entry';
+import Entry from './components/Entry';
+import './css/main.css';
 
 class App extends React.Component {
 	render() {

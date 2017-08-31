@@ -25,6 +25,8 @@ const commonConfig = merge([
         ],
     },
     parts.lintJavaScript({ include: PATHS.app }),
+    parts.loadCSS(),
+    parts.loadBabel({ include: PATHS.app, exclude(path) {return path.match(/node_modules/);} }),
 ]);
 
 const productionConfig = merge([
