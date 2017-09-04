@@ -47,7 +47,7 @@ exports.loadBabel = ({ include, exclude } = {}) => ({
         test: /\.js$/,
         include,
         exclude,
-        use: 'babel-loader',
+        use: ['babel-loader'],
       },
     ],
   },

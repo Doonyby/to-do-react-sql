@@ -5,7 +5,7 @@ const merge = require('webpack-merge');
 const parts = require('./webpack.parts');
 
 const PATHS = {
-    app: path.join(__dirname, 'app'),
+    app: path.join(__dirname, 'app/index.js'),
     build: path.join(__dirname, 'build'),
 };
 

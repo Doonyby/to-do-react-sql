@@ -4,7 +4,7 @@ class Entry extends React.Component {
 	render() {
 		return(
 			<div>
-				<h1>I did it!!! and Hello World!!</h1>
+				<h1>Hello World!!</h1>
 			</div>
 		);
 	}
