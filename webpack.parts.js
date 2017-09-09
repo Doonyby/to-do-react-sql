@@ -33,7 +33,6 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
         test: /\.css$/,
         include,
         exclude,
-
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
@@ -44,10 +43,10 @@ exports.loadBabel = ({ include, exclude } = {}) => ({
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         include,
         exclude,
-        use: ['babel-loader'],
+        use: 'babel-loader',
       },
     ],
   },
