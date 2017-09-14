@@ -5,8 +5,8 @@ const merge = require('webpack-merge');
 const parts = require('./webpack.parts');
 
 const PATHS = {
-    app: path.join(__dirname, 'app/index.js'),
-    build: path.join(__dirname, 'build'),
+    app: path.join(__dirname, 'src/index.js'),
+    build: path.resolve(__dirname, 'build'),
 };
 
 const commonConfig = merge([
@@ -37,17 +37,19 @@ const productionConfig = merge([
 
 ]);
 
-const developmentConfig = merge([
-    parts.devServer({
-        host: process.env.HOST,
-        port: process.env.PORT,
-    }),
-]);
+// const developmentConfig = merge([
+//     parts.devServer({
+//         host: process.env.HOST,
+//         port: process.env.PORT,
+//     }),
+// ]);
+// "nodemon --watch webpack.config.js --exec \"webpack-dev-server --env development\"",
+
 
 module.exports = (env) => {
     if (env === 'production') {
         return merge(commonConfig, productionConfig);
     }
 
-    return merge(commonConfig, developmentConfig);
+    return merge(commonConfig);
 };

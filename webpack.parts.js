@@ -1,15 +1,15 @@
-exports.devServer = ({host, port} = {}) => ({
-    devServer: {
-        historyApiFallback: true,
-        stats: 'errors-only',
-        host, //defaults to 'localhost'
-        port, //defaults to 8080
-        overlay: {
-            errors: true,
-            warnings: true,
-        },
-    },
-});
+// exports.devServer = ({host, port} = {}) => ({
+//     devServer: {
+//         historyApiFallback: true,
+//         stats: 'errors-only',
+//         host, //defaults to 'localhost'
+//         port, //defaults to 8080
+//         overlay: {
+//             errors: true,
+//             warnings: true,
+//         },
+//     },
+// });
 
 exports.lintJavaScript = ({include, exclude, options} = {}) => ({
     module: {
