@@ -1,11 +1,7 @@
 import React from "react";
 
-class TodoInput extends React.Component {
-	render() {
-		return(
-			<input type="text" />
-		);
-	}
+export default function TodoInput(props) {
+	return(
+		<input type="text" onKeyPress={props.handleKeyPress} />
+	);
 }
-
-export default TodoInput;
