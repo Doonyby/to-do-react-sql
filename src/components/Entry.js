@@ -1,17 +1,14 @@
 import React from "react";
+import TodoInput from "./TodoInput.js";
+import TodoList from "./TodoList.js";
 
 class Entry extends React.Component {
-	constructor() {
-		super()
-		this.state= {
-			data: ["this", "will", "be", "my", "data", "from", "my", "sql", "server"],
-		}
-	}
 	render() {
-		console.log(props.data);
 		return(
 			<div>
-				<h1>Hello World!!</h1>
+				<h1>My Todo List</h1>
+				<TodoInput />
+				<TodoList />
 			</div>
 		);
 	}
